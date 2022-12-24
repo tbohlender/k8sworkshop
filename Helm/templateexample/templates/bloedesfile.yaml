@@ -21,4 +21,5 @@ text: |
 
 {{/* functions vs pipelines    */}}  
   {{ quote .Release.Name }}
-{{ .Release.Name | quote  |   indent 2  }}
+{{ .Release.Name | quote | indent 2 }}
+{{ .Release.Name | upper | b64enc | indent 2 }}
